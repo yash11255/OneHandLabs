@@ -1,6 +1,6 @@
 export default function StatsSection() {
     return (
-        <section className="py-32 px-12 max-w-[1440px] mx-auto">
+        <section className="py-20 md:py-32 px-6 md:px-12 max-w-[1440px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
                 <div className="space-y-6">
                     <span className="text-primary-container font-mono text-xs tracking-widest uppercase">

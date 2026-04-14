@@ -21,7 +21,7 @@ export default function Hero() {
                     </span>
                 </div>
 
-                <h1 className="text-6xl md:text-[5.5rem] font-bold font-headline leading-[0.9] tracking-tighter text-white mb-8">
+                <h1 className="text-5xl md:text-[5.5rem] font-bold font-headline leading-[0.9] tracking-tighter text-white mb-8">
                     Engineering Logic.<br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">
                         Marketing Magic.

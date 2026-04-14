@@ -3,12 +3,12 @@ import Link from "next/link";
 export default function CTA() {
     return (
         <section className="py-20 bg-surface-container-lowest overflow-hidden">
-            <div className="max-w-[1440px] mx-auto px-12">
-                <div className="bg-surface-container p-12 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-12 relative">
+            <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+                <div className="bg-surface-container p-8 md:p-12 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-12 relative">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 blur-3xl"></div>
                     <div className="max-w-xl">
-                        <h2 className="text-5xl font-headline font-extrabold text-white mb-6">READY TO SCALE?</h2>
-                        <p className="text-on-surface-variant text-lg">
+                        <h2 className="text-4xl md:text-5xl font-headline font-extrabold text-white mb-6">READY TO SCALE?</h2>
+                        <p className="text-on-surface-variant text-[16px] md:text-lg">
                             Select your primary objective to begin the onboarding sequence with our lead engineers and
                             creative directors.
                         </p>

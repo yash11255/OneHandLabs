@@ -59,11 +59,12 @@ export default function Navbar() {
 
                     {/* Hamburger Button */}
                     <button 
+                        type="button"
                         onClick={toggleMobileMenu}
-                        className="md:hidden text-white p-2 hover:text-primary transition-colors flex items-center justify-center"
+                        className="md:hidden relative z-[60] cursor-pointer pointer-events-auto text-white p-2 hover:text-primary transition-colors flex items-center justify-center"
                         aria-label="Toggle mobile menu"
                     >
-                        <span className="material-symbols-outlined text-[28px]">
+                        <span className="material-symbols-outlined text-[28px] pointer-events-none">
                             {isMobileMenuOpen ? 'close' : 'menu'}
                         </span>
                     </button>
@@ -71,33 +72,35 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Navigation Menu */}
-            <div className={`md:hidden absolute top-full left-0 w-full bg-surface-container-low/95 backdrop-blur-2xl border-b border-outline-variant/10 flex flex-col items-center py-8 gap-6 shadow-2xl transition-all duration-300 origin-top ${isMobileMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'}`}>
-                {navLinks.map((link) => {
-                    const isActive = pathname === link.href;
+            {isMobileMenuOpen && (
+                <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-3xl border-b border-white/10 flex flex-col items-center py-8 gap-6 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-300">
+                    {navLinks.map((link) => {
+                        const isActive = pathname === link.href;
 
-                    return (
-                        <Link
-                            key={link.label}
-                            href={link.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className={`font-headline tracking-widest text-lg uppercase transition-colors duration-300 ${
-                                isActive
-                                    ? "text-primary font-bold"
-                                    : "text-white/70 hover:text-white"
-                            }`}
-                        >
-                            {link.label}
-                        </Link>
-                    );
-                })}
-                <Link
-                    href="/services"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="mt-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline text-sm px-10 py-3 rounded-lg font-bold tracking-widest uppercase hover:opacity-90 transition-all duration-300 cyan-glow"
-                >
-                    Dual-Core Target
-                </Link>
-            </div>
+                        return (
+                            <Link
+                                key={link.label}
+                                href={link.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className={`font-headline tracking-widest text-lg uppercase transition-colors duration-300 ${
+                                    isActive
+                                        ? "text-primary font-bold"
+                                        : "text-white/70 hover:text-white"
+                                }`}
+                            >
+                                {link.label}
+                            </Link>
+                        );
+                    })}
+                    <Link
+                        href="/services"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="mt-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline text-sm px-10 py-3 rounded-lg font-bold tracking-widest uppercase hover:opacity-90 transition-all duration-300 cyan-glow"
+                    >
+                        Dual-Core Target
+                    </Link>
+                </div>
+            )}
         </nav>
     );
 }

@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function SplitGrid() {
     return (
-        <section id="services" className="grid grid-cols-1 md:grid-cols-2 min-h-[900px] border-t border-outline-variant/10">
+        <section id="services" className="grid grid-cols-1 lg:grid-cols-2 min-h-[900px] border-t border-outline-variant/10">
             {/* Left Side: Labs/Software */}
-            <div className="relative flex flex-col p-12 overflow-hidden bg-surface-container-lowest labs-section group">
+            <div className="relative flex flex-col p-8 lg:p-12 overflow-hidden bg-surface-container-lowest labs-section group">
                 <div className="grid-line-motif absolute inset-0 z-0"></div>
                 <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center gap-3 mb-12">
@@ -67,7 +67,7 @@ export default function SplitGrid() {
             </div>
 
             {/* Right Side: Agency/Marketing */}
-            <div className="relative flex flex-col p-12 overflow-hidden bg-surface-container agency-section">
+            <div className="relative flex flex-col p-8 lg:p-12 overflow-hidden bg-surface-container agency-section">
                 <div className="fluid-organic absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full z-0"></div>
                 <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-center gap-3 mb-12">

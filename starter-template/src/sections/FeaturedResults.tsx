@@ -17,9 +17,9 @@ export default function FeaturedResults() {
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                 {/* Large Stat Card */}
-                <div className="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container p-12 transition-all duration-500 hover:bg-surface-container-high border border-outline-variant/5">
+                <div className="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container p-8 md:p-12 transition-all duration-500 hover:bg-surface-container-high border border-outline-variant/5">
                     <div className="relative z-10">
-                        <div className="text-[5rem] md:text-[8rem] font-headline font-bold leading-none tracking-tighter text-white mb-4">
+                        <div className="text-6xl md:text-[8rem] font-headline font-bold leading-none tracking-tighter text-white mb-4">
                             340<span className="text-primary">%</span>
                         </div>
                         <div className="text-xl font-headline font-bold text-white mb-6 uppercase tracking-widest">
@@ -72,7 +72,7 @@ export default function FeaturedResults() {
                 </div>
 
                 {/* Final Stat Card */}
-                <div className="md:col-span-8 glass-panel p-12 rounded-xl border border-outline-variant/10 flex flex-col md:flex-row gap-12 items-center">
+                <div className="md:col-span-8 glass-panel p-8 md:p-12 rounded-xl border border-outline-variant/10 flex flex-col md:flex-row gap-12 items-center">
                     <div className="flex-1">
                         <h3 className="text-3xl font-headline font-bold text-white mb-4">Market Velocity</h3>
                         <p className="text-on-surface-variant">

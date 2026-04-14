@@ -37,7 +37,7 @@ export default function Contact() {
                 </div>
 
                 {/* Form Container (Glassmorphism) */}
-                <div className="glass-panel p-8 md:p-12 rounded-xl border border-outline-variant/15 shadow-[0_0_40px_rgba(0,255,255,0.02)]">
+                <div className="glass-panel p-6 md:p-12 rounded-xl border border-outline-variant/15 shadow-[0_0_40px_rgba(0,255,255,0.02)]">
                     <form className="space-y-10">
                         {/* Toggle Switch (Laboratory Toggles) */}
                         <div className="space-y-4">
