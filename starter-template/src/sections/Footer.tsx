@@ -23,6 +23,9 @@ export default function Footer() {
                     <span className="text-white font-headline text-2xl font-bold italic tracking-tighter uppercase">
                         DELHI — GURUGRAM
                     </span>
+                    <a href="tel:+918950143430" className="text-primary font-body text-sm font-bold tracking-widest mt-1 hover:text-white transition-colors">
+                        +91 8950 143 430
+                    </a>
                     <p className="font-body text-xs tracking-widest uppercase text-neutral-500 mt-2">
                         © 2024 ONE Hand Labs. Precision in Development. Fluidity in Marketing.
                     </p>

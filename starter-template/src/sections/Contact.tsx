@@ -135,11 +135,16 @@ export default function Contact() {
                 </div>
 
                 {/* Secondary Info (Minimal Bento) */}
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-surface-container-low p-6 rounded-lg transition-colors hover:bg-surface-container">
                         <span className="material-symbols-outlined text-primary mb-3">terminal</span>
                         <h3 className="font-headline font-bold text-white text-sm uppercase mb-1">Direct Relay</h3>
                         <p className="font-body text-on-surface-variant text-xs">systems@onehandlabs.com</p>
+                    </div>
+                    <div className="bg-surface-container-low p-6 rounded-lg transition-colors hover:bg-surface-container">
+                        <span className="material-symbols-outlined text-primary mb-3">call</span>
+                        <h3 className="font-headline font-bold text-white text-sm uppercase mb-1">Comm Line</h3>
+                        <p className="font-body text-on-surface-variant text-xs">+91 8950 143 430</p>
                     </div>
                     <div className="bg-surface-container-low p-6 rounded-lg transition-colors hover:bg-surface-container">
                         <span className="material-symbols-outlined text-primary mb-3">location_on</span>
