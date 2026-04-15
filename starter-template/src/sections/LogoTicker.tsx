@@ -30,17 +30,17 @@ const clients: Client[] = [
         id: "curestone", type: "img", src: "/Screenshot 2026-04-14 at 12.13.50 PM.png",
         label: "Urology", desc: "Cure Stone (specifically the Cure Stone Urology & Kidney Stone Clinic) is a specialized healthcare provider in Gurgaon focused on advanced treatments for urology and kidney stones", href: "https://thecurestone.com"
     },
-    { 
-        id: "kalla", type: "img", src: "https://cdn.hexahealth.com/Image/webp/480x480/a0ec1270-4143-4027-91a5-a15250019495.webp", 
-        label: "Professional", desc: "A specialist in General Medicine with a rich experience of over 13 years", href: "#" 
+    {
+        id: "kalla", type: "img", src: "https://cdn.hexahealth.com/Image/webp/480x480/a0ec1270-4143-4027-91a5-a15250019495.webp",
+        label: "Professional", desc: "A specialist in General Medicine with a rich experience of over 13 years", href: "#"
     },
-    { 
-        id: "gupta", type: "img", src: "/1650339213806-pvt6nrrseu7txrxqci6ph9v3zc7awzsjdx0be5vrno.jpg.webp", 
-        label: "Urologist", desc: "Dr Deepanshu Gupta is one of the top Urologist in Gurgaon/Delhi NCR. He is a dedicated and reputed  Urologist, Andrologist & Renal Transplant surgeon proficient in kidney stone treatment, Prostate Enlargement Surgery.", href: "#" 
+    {
+        id: "gupta", type: "img", src: "/1650339213806-pvt6nrrseu7txrxqci6ph9v3zc7awzsjdx0be5vrno.jpg.webp",
+        label: "Urologist", desc: "Dr Deepanshu Gupta is one of the top Urologist in Gurgaon/Delhi NCR. He is a dedicated and reputed  Urologist, Andrologist & Renal Transplant surgeon proficient in kidney stone treatment, Prostate Enlargement Surgery.", href: "#"
     },
-    { 
-        id: "goel", type: "img", src: "/Dr%20anshul.jpeg", 
-        label: "Orthopedic surgeon", desc: "Orthopedic surgeon, Spine Surgeon (Ortho), Joint Replacement Surgeon, Orthopedist 19 Years Experience Overall  (13 years as specialist)", href: "#" 
+    {
+        id: "goel", type: "img", src: "/Dr%20anshul.jpeg",
+        label: "Orthopedic surgeon", desc: "Orthopedic surgeon, Spine Surgeon (Ortho), Joint Replacement Surgeon, Orthopedist 19 Years Experience Overall  (13 years as specialist)", href: "#"
     },
 ];
 
@@ -62,7 +62,7 @@ export default function ClientCarousel() {
                         Our Network
                     </h2>
                     <p className="text-4xl font-headline font-bold text-white uppercase tracking-tighter">
-                        Trusted Partners
+                        Trusted client
                     </p>
                 </div>
                 {/* Navigation Buttons */}
