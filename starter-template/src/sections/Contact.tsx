@@ -65,14 +65,14 @@ export default function Contact() {
                     <span className="font-headline text-primary tracking-[0.3em] text-[10px] uppercase block mb-4">
                         Precision Intake
                     </span>
-                    <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[0.9] mb-6">
-                        Let&apos;s scale <br />
-                        your vision.
+                    <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter text-white leading-[1.1] mb-6">
+                        Get a Quote for <br />
+                        Healthcare Marketing<br /> 
+                        <span className="text-primary text-3xl md:text-5xl">in Delhi & Gurgaon</span>
                     </h1>
-                    <p className="font-body text-on-surface-variant text-lg max-w-lg leading-relaxed">
-                        A digital laboratory where code meets creativity. Tell us about your project and we&apos;ll
-                        engineer the solution.
-                    </p>
+                    <h2 className="font-body text-on-surface-variant text-lg max-w-lg leading-relaxed">
+                        Offices in Delhi NCR & Consulting in Gurgaon. Let&apos;s engineer your clinical growth.
+                    </h2>
                 </div>
 
                 {/* Form Container */}
@@ -255,6 +255,21 @@ export default function Contact() {
                         <h3 className="font-headline font-bold text-white text-sm uppercase mb-1">Digital Node</h3>
                         <p className="font-body text-on-surface-variant text-xs">Delhi NCR / Gurugram</p>
                     </div>
+                </div>
+
+                {/* Map Section */}
+                <div className="mt-8 bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/15 h-80 relative shadow-[0_0_40px_rgba(0,255,255,0.02)]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.2031128!2d77.0274!3d28.6102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0559139d3c7f%3A0x8b4af178588d14d4!2sOne%20Hand%20Labs!5e0!3m2!1sen!2sin!4v1713348123456!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style={{ border: 0 }} 
+                        allowFullScreen={false} 
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="ONE Hand Labs Contact Map"
+                        className="absolute inset-0 grayscale-[0.8] contrast-125 hover:grayscale-0 hover:contrast-100 transition-all duration-700"
+                    ></iframe>
                 </div>
             </div>
         </section>

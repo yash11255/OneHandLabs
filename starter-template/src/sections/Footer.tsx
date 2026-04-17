@@ -26,6 +26,19 @@ export default function Footer() {
                     <a href="tel:+918950143430" className="text-primary font-body text-sm font-bold tracking-widest mt-1 hover:text-white transition-colors">
                         +91 8950 143 430
                     </a>
+                    
+                    <div className="w-full h-40 md:w-72 md:h-28 mt-4 rounded-lg overflow-hidden border border-outline-variant/15 opacity-70 hover:opacity-100 transition-opacity">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.2031128!2d77.0274!3d28.6102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0559139d3c7f%3A0x8b4af178588d14d4!2sOne%20Hand%20Labs!5e0!3m2!1sen!2sin!4v1713348123456!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style={{ border: 0 }} 
+                            allowFullScreen={false} 
+                            loading="lazy" 
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="ONE Hand Labs Location Map"
+                        ></iframe>
+                    </div>
                     <p className="font-body text-xs tracking-widest uppercase text-neutral-500 mt-2">
                         © 2024 ONE Hand Labs. Precision in Development. Fluidity in Marketing.
                     </p>

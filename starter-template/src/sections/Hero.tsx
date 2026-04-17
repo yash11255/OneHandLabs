@@ -99,15 +99,27 @@ function StatPill({ value, label, index }: StatPillProps) {
     );
 }
 
+interface HeroProps {
+    titlePrefix?: string;
+    titleHighlight?: string;
+    titleSuffix?: string;
+    subtitle?: string;
+}
+
 /* ─────────────────────────────────────────
    Hero
 ───────────────────────────────────────── */
-export default function Hero() {
+export default function Hero({
+    titlePrefix = "ONE Hand Labs:",
+    titleHighlight = "Medical Marketing &",
+    titleSuffix = "Software Agency in Delhi NCR",
+    subtitle = "High-Performance Software Development & Medical Marketing. We engineer market dominance through precise code and data-driven growth."
+}: HeroProps = {}) {
     const [mousePos, setMousePos] = useState({ x: -9999, y: -9999 });
     const [mounted, setMounted] = useState(false);
     const [videoLoaded, setVideoLoaded] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
-    const videoRef  = useRef<HTMLVideoElement>(null);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
         setMounted(true);
@@ -217,21 +229,21 @@ export default function Hero() {
                     onCanPlay={() => setVideoLoaded(true)}
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
                     style={{
-                        opacity: videoLoaded ? 0.28 : 0,
+                        opacity: videoLoaded ? 0.35 : 0,
                         transition: "opacity 1.4s ease",
-                        filter: "saturate(0.6) brightness(0.7) contrast(1.1)",
+                        filter: "saturate(0.4) brightness(0.6) contrast(1.2)",
                     }}
                 >
                     <source
-                        src="https://assets.mixkit.co/videos/45298/45298-720.mp4"
+                        src="https://assets.mixkit.co/videos/1273/1273-720.mp4"
                         type="video/mp4"
                     />
                     <source
-                        src="https://assets.mixkit.co/videos/44818/44818-720.mp4"
+                        src="https://assets.mixkit.co/videos/40306/40306-720.mp4"
                         type="video/mp4"
                     />
                     <source
-                        src="https://assets.mixkit.co/videos/3524/3524-720.mp4"
+                        src="https://assets.mixkit.co/videos/812/812-720.mp4"
                         type="video/mp4"
                     />
                 </video>
@@ -329,14 +341,14 @@ export default function Hero() {
                     <h1
                         className="font-headline font-bold tracking-tighter text-white mb-6"
                         style={{
-                            fontSize: "clamp(2.6rem, 7.5vw, 5.25rem)",
+                            fontSize: "clamp(2.2rem, 6.5vw, 4.5rem)",
                             lineHeight: 1.0,
                             opacity: mounted ? 1 : 0,
                             transform: mounted ? "translateY(0)" : "translateY(24px)",
                             transition: "opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s",
                         }}
                     >
-                        Engineering Logic.
+                        {titlePrefix}
                         <br />
                         <span
                             className="hero-gradient-x text-transparent bg-clip-text inline-block"
@@ -345,23 +357,23 @@ export default function Hero() {
                                     "linear-gradient(90deg, #c1fffe 0%, #63baff 45%, #00ffff 75%, #c1fffe 100%)",
                             }}
                         >
-                            Marketing Magic.
+                            {titleHighlight}
                         </span>
+                        <br />
+                        {titleSuffix}
                     </h1>
 
                     {/* Sub-headline */}
-                    <p
-                        className="text-base md:text-lg text-on-surface-variant max-w-lg mb-10 leading-relaxed"
+                    <h2
+                        className="text-base md:text-lg text-on-surface-variant max-w-lg mb-10 leading-relaxed font-body"
                         style={{
                             opacity: mounted ? 1 : 0,
                             transform: mounted ? "translateY(0)" : "translateY(20px)",
                             transition: "opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s",
                         }}
                     >
-                        A hybrid laboratory for high-performance software development and
-                        data-driven marketing growth. We don&apos;t just build products —
-                        we&nbsp;engineer market dominance.
-                    </p>
+                        {subtitle}
+                    </h2>
 
                     {/* Dual-Core cards */}
                     <div
@@ -468,10 +480,9 @@ export default function Hero() {
                         }}
                     >
                         {[
-                            { value: "98%",  label: "Uptime SLA"  },
-                            { value: "3.2×", label: "Avg. ROI"    },
+                            { value: "98%", label: "Uptime SLA" },
+                            { value: "3.2×", label: "Avg. ROI" },
                             { value: "150+", label: "Deployments" },
-                            { value: "40+",  label: "Clients"     },
                         ].map((stat, i) => (
                             <StatPill key={stat.label} value={stat.value} label={stat.label} index={i} />
                         ))}
@@ -490,7 +501,7 @@ function CoreCard({ href, icon, iconColor, title, description, glowColor, badge 
 
     const isPrimary = glowColor === "primary";
     // 6-digit hex so 8-digit hex alpha suffixes work correctly
-    const accentHex  = isPrimary ? "#c1fffe" : "#63baff";
+    const accentHex = isPrimary ? "#c1fffe" : "#63baff";
     const accentRgba = isPrimary ? "rgba(193,255,254," : "rgba(99,186,255,";
 
     return (
