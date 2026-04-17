@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { locations } from '@/data/locations';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://onehandlabs.com';
+    const baseUrl = 'https://onehandlabs.in';
 
     // Core Pages
     const corePages = [

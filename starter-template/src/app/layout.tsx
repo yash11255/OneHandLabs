@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         locale: "en_IN",
-        url: "https://onehandlabs.com",
+        url: "https://onehandlabs.in",
         title: "ONE Hand Labs | Engineering Logic. Marketing Magic.",
         description: "A hybrid laboratory for high-performance software development and data-driven marketing growth.",
         siteName: "ONE Hand Labs",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     },
     manifest: "/site.webmanifest",
     alternates: {
-        canonical: "https://onehandlabs.com",
+        canonical: "https://onehandlabs.in",
     },
     robots: {
         index: true,

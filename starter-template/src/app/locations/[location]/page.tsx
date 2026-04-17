@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
         description: `Looking for top hospital website development in ${data.name}? ONE Hand Labs engineers bespoke digital solutions and branding for clinics in ${data.region}.`,
         alternates: {
             // Absolute canonical ensures no duplication penalties
-            canonical: `https://onehandlabs.com/locations/${data.slug}`,
+            canonical: `https://onehandlabs.in/locations/${data.slug}`,
         },
     };
 }

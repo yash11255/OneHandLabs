@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://onehandlabs.com/sitemap.xml',
+        sitemap: 'https://onehandlabs.in/sitemap.xml',
     };
 }

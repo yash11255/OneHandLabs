@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "Contact Us | ONE Hand Labs",
     description: "Get in touch with ONE Hand Labs, a hybrid laboratory for high-performance software development and data-driven marketing growth in Delhi NCR.",
     alternates: {
-        canonical: "https://onehandlabs.com/contact",
+        canonical: "https://onehandlabs.in/contact",
     },
 };
 
