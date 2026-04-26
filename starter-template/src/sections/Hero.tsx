@@ -111,9 +111,9 @@ interface HeroProps {
 ───────────────────────────────────────── */
 export default function Hero({
     titlePrefix = "ONE Hand Labs:",
-    titleHighlight = "Medical Marketing &",
-    titleSuffix = "Software Agency in Delhi NCR",
-    subtitle = "High-Performance Software Development & Medical Marketing. We engineer market dominance through precise code and data-driven growth."
+    titleHighlight = "CRM, HRMS &",
+    titleSuffix = "Payroll Systems",
+    subtitle = "High-performance internal tools & enterprise software. We build reliable CRM, HRMS, and Payroll platforms without the fluff."
 }: HeroProps = {}) {
     const [mousePos, setMousePos] = useState({ x: -9999, y: -9999 });
     const [mounted, setMounted] = useState(false);
@@ -229,21 +229,21 @@ export default function Hero({
                     onCanPlay={() => setVideoLoaded(true)}
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
                     style={{
-                        opacity: videoLoaded ? 0.35 : 0,
+                        opacity: videoLoaded ? 0.6 : 0,
                         transition: "opacity 1.4s ease",
                         filter: "saturate(0.4) brightness(0.6) contrast(1.2)",
                     }}
                 >
                     <source
+                        src="https://assets.mixkit.co/videos/4119/4119-720.mp4"
+                        type="video/mp4"
+                    />
+                    <source
+                        src="https://assets.mixkit.co/videos/3524/3524-720.mp4"
+                        type="video/mp4"
+                    />
+                    <source
                         src="https://assets.mixkit.co/videos/1273/1273-720.mp4"
-                        type="video/mp4"
-                    />
-                    <source
-                        src="https://assets.mixkit.co/videos/40306/40306-720.mp4"
-                        type="video/mp4"
-                    />
-                    <source
-                        src="https://assets.mixkit.co/videos/812/812-720.mp4"
                         type="video/mp4"
                     />
                 </video>
@@ -333,7 +333,7 @@ export default function Hero({
                             className="text-[10px] uppercase font-headline whitespace-nowrap"
                             style={{ letterSpacing: "0.22em", color: "#c1fffe" }}
                         >
-                            System Online · v2.04
+                            Platform Ready · v3.0
                         </span>
                     </div>
 
@@ -395,12 +395,12 @@ export default function Hero({
                         />
                         <CoreCard
                             href="/services"
-                            icon="insights"
+                            icon="dns"
                             iconColor="text-tertiary"
-                            title="Growth Core"
-                            description="Performance marketing & conversion ops that compound."
+                            title="Enterprise Core"
+                            description="Robust CRM, HRMS, and internal payroll platforms tailored to your operations."
                             glowColor="tertiary"
-                            badge="Marketing"
+                            badge="Systems"
                         />
                     </div>
 
@@ -436,14 +436,14 @@ export default function Hero({
                                 (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
                             }}
                         >
-                            Launch Project
+                            Book a Demo
                             <span className="material-symbols-outlined" style={{ fontSize: 18, transition: "transform 0.2s ease" }}>
                                 arrow_forward
                             </span>
                         </Link>
 
                         <Link
-                            href="/work"
+                            href="/products"
                             className="inline-flex items-center gap-2 font-headline font-bold text-sm uppercase text-white"
                             style={{
                                 border: "1px solid rgba(72,72,71,0.4)",
@@ -466,7 +466,7 @@ export default function Hero({
                             }}
                         >
                             <span className="material-symbols-outlined" style={{ fontSize: 18 }}>play_circle</span>
-                            View Work
+                            See Products
                         </Link>
                     </div>
 
@@ -480,9 +480,9 @@ export default function Hero({
                         }}
                     >
                         {[
-                            { value: "98%", label: "Uptime SLA" },
-                            { value: "3.2×", label: "Avg. ROI" },
-                            { value: "150+", label: "Deployments" },
+                            { value: "99%", label: "Payroll Accuracy" },
+                            { value: "3×", label: "Faster HR Ops" },
+                            { value: "60+", label: "Enterprises" },
                         ].map((stat, i) => (
                             <StatPill key={stat.label} value={stat.value} label={stat.label} index={i} />
                         ))}

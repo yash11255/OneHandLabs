@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import Navbar from "@/sections/Navbar";
 import Hero from "@/sections/Hero";
 import LogoTicker from "@/sections/LogoTicker";
 import FeaturedResults from "@/sections/FeaturedResults";
-import OldCTA from "@/sections/OldCTA";
+import FeaturesGrid from "@/sections/FeaturesGrid";
+import Testimonials from "@/sections/Testimonials";
+import CTA from "@/sections/CTA";
 import Footer from "@/sections/Footer";
+
+export const metadata: Metadata = {
+    title: "ONE Hand Labs | CRM, HRMS & Payroll Systems",
+    description: "Enterprise-grade CRM, HRMS, and Payroll software built for Indian businesses. Automate HR, payroll compliance, and customer management with ONE Hand Labs.",
+};
 
 export default function Home() {
     return (
@@ -12,8 +20,10 @@ export default function Home() {
             <main className="flex-1">
                 <Hero />
                 <LogoTicker />
+                <FeaturesGrid />
                 <FeaturedResults />
-                <OldCTA />
+                <Testimonials />
+                <CTA />
             </main>
             <Footer />
         </div>

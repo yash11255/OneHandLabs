@@ -118,7 +118,7 @@ export default function DrShoshKallaArticle() {
                             In a landscape crowded with medical professionals competing for visibility
                             online, few physicians have built the kind of quiet, authoritative digital
                             presence that Dr. Shosh Kalla has. A specialist in integrative and
-                            regenerative medicine, Dr. Kalla's approach to patient care is mirrored in
+                            regenerative medicine, Dr. Kalla&apos;s approach to patient care is mirrored in
                             how she communicates: with precision, empathy, and depth.
                         </p>
 
@@ -144,9 +144,9 @@ export default function DrShoshKallaArticle() {
                             The Philosophy of Regenerative Medicine
                         </h2>
                         <p>
-                            "Regenerative medicine is about working with the body's own intelligence,"
-                            Dr. Kalla explains. "Our role as physicians is not to fight the body, but to
-                            give it the information and resources it needs to heal." This philosophy
+                            &ldquo;Regenerative medicine is about working with the body&apos;s own intelligence,&rdquo;
+                            Dr. Kalla explains. &ldquo;Our role as physicians is not to fight the body, but to
+                            give it the information and resources it needs to heal.&rdquo; This philosophy
                             translates seamlessly into the digital content strategy at{" "}
                             <a
                                 href="https://imedi.health"

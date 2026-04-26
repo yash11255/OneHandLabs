@@ -16,22 +16,23 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
     title: {
-        default: "ONE Hand Labs | Engineering Logic. Marketing Magic.",
+        default: "ONE Hand Labs | CRM, HRMS & Payroll Systems",
         template: "%s | ONE Hand Labs",
     },
-    description: "A hybrid laboratory for high-performance software development and data-driven marketing growth located in Delhi NCR, Gurugram. Contact us for top-tier digital scaling.",
+    description: "Enterprise CRM, HRMS, and Payroll software built for Indian businesses. Automate HR operations, payroll compliance, and customer management with ONE Hand Labs — based in Delhi NCR.",
     keywords: [
-        "Medical Digital Marketing Agency in Delhi",
-        "Healthcare Marketing Company in Gurgaon",
-        "Hospital Website Development Delhi NCR",
-        "Digital Solutions for Doctors and Hospitals",
-        "Best Healthcare Branding Agency Gurgaon",
-        "Software Development for Medical Clinics Delhi",
-        "Custom EMR Software Development",
-        "Next.js Hospital Websites",
-        "Patient Portal Design Delhi",
-        "Doctor Profile Video Shoots Gurgaon",
-        "IoT Solutions for Smart Hospitals"
+        "CRM software India",
+        "HRMS software India",
+        "payroll software India",
+        "HR management system Delhi",
+        "payroll automation India",
+        "employee management system",
+        "TDS EPF ESI payroll",
+        "CRM for Indian SMEs",
+        "HRMS for startups India",
+        "enterprise software Delhi NCR",
+        "payroll compliance software",
+        "ONE Hand Labs",
     ],
     openGraph: {
         type: "website",

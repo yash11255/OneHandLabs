@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
+    { label: "About", href: "/about" },
     { label: "Work", href: "/work" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
@@ -37,11 +37,10 @@ export default function Navbar() {
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                className={`font-headline tracking-tight text-sm uppercase transition-colors duration-300 ${
-                                    isActive
-                                        ? "text-white border-b border-primary pb-1"
-                                        : "text-neutral-400 hover:text-primary"
-                                }`}
+                                className={`font-headline tracking-tight text-sm uppercase transition-colors duration-300 ${isActive
+                                    ? "text-white border-b border-primary pb-1"
+                                    : "text-neutral-400 hover:text-primary"
+                                    }`}
                             >
                                 {link.label}
                             </Link>
@@ -59,7 +58,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* Hamburger Button */}
-                    <button 
+                    <button
                         type="button"
                         onClick={toggleMobileMenu}
                         className="md:hidden relative z-[60] cursor-pointer pointer-events-auto text-white p-2 hover:text-primary transition-colors flex items-center justify-center"
@@ -83,11 +82,10 @@ export default function Navbar() {
                                 key={link.label}
                                 href={link.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className={`font-headline tracking-widest text-lg uppercase transition-colors duration-300 ${
-                                    isActive
-                                        ? "text-primary font-bold"
-                                        : "text-white/70 hover:text-white"
-                                }`}
+                                className={`font-headline tracking-widest text-lg uppercase transition-colors duration-300 ${isActive
+                                    ? "text-primary font-bold"
+                                    : "text-white/70 hover:text-white"
+                                    }`}
                             >
                                 {link.label}
                             </Link>
