@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import MapEmbed from "@/components/MapEmbed";
 
 // 👇 PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyizy-qI9lmsAui9wPY1VU1VxLYqh-O0H7BJKT6jx4FQK9BgBdqVfsLunNNvOMfDHsN/exec";
@@ -66,12 +67,12 @@ export default function Contact() {
                         Precision Intake
                     </span>
                     <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter text-white leading-[1.1] mb-6">
-                        Get a Quote for <br />
-                        Healthcare Marketing<br /> 
-                        <span className="text-primary text-3xl md:text-5xl">in Delhi & Gurgaon</span>
+                        Let&apos;s Build <br />
+                        Something Real<br />
+                        <span className="text-primary text-3xl md:text-5xl">in Delhi NCR & Gurugram</span>
                     </h1>
                     <h2 className="font-body text-on-surface-variant text-lg max-w-lg leading-relaxed">
-                        Offices in Delhi NCR & Consulting in Gurgaon. Let&apos;s engineer your clinical growth.
+                        Whether you need custom software and growth for a healthcare brand, or want a demo of CRM Nexus, HRMS Pro, or PaySync — tell us what you&apos;re trying to solve.
                     </h2>
                 </div>
 
@@ -110,6 +111,7 @@ export default function Contact() {
                                                 : "text-on-surface-variant hover:text-white"
                                             }`}
                                         type="button"
+                                        aria-pressed={objective === "product"}
                                         onClick={() => setObjective("product")}
                                     >
                                         Build a Product
@@ -120,6 +122,7 @@ export default function Contact() {
                                                 : "text-on-surface-variant hover:text-white"
                                             }`}
                                         type="button"
+                                        aria-pressed={objective === "brand"}
                                         onClick={() => setObjective("brand")}
                                     >
                                         Grow a Brand
@@ -243,12 +246,12 @@ export default function Contact() {
                     <div className="bg-surface-container-low p-6 rounded-lg transition-colors hover:bg-surface-container">
                         <span className="material-symbols-outlined text-primary mb-3">terminal</span>
                         <h3 className="font-headline font-bold text-white text-sm uppercase mb-1">Direct Relay</h3>
-                        <p className="font-body text-on-surface-variant text-xs">systems@onehandlabs.com</p>
+                        <a href="mailto:systems@onehandlabs.in" className="font-body text-on-surface-variant text-xs hover:text-primary transition-colors">systems@onehandlabs.in</a>
                     </div>
                     <div className="bg-surface-container-low p-6 rounded-lg transition-colors hover:bg-surface-container">
                         <span className="material-symbols-outlined text-primary mb-3">call</span>
                         <h3 className="font-headline font-bold text-white text-sm uppercase mb-1">Comm Line</h3>
-                        <p className="font-body text-on-surface-variant text-xs">+91 8950 143 430</p>
+                        <a href="tel:+918950143430" className="font-body text-on-surface-variant text-xs hover:text-primary transition-colors">+91 8950 143 430</a>
                     </div>
                     <div className="bg-surface-container-low p-6 rounded-lg transition-colors hover:bg-surface-container">
                         <span className="material-symbols-outlined text-primary mb-3">location_on</span>
@@ -259,17 +262,10 @@ export default function Contact() {
 
                 {/* Map Section */}
                 <div className="mt-8 bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant/15 h-80 relative shadow-[0_0_40px_rgba(0,255,255,0.02)]">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.2031128!2d77.0274!3d28.6102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0559139d3c7f%3A0x8b4af178588d14d4!2sOne%20Hand%20Labs!5e0!3m2!1sen!2sin!4v1713348123456!5m2!1sen!2sin" 
-                        width="100%" 
-                        height="100%" 
-                        style={{ border: 0 }} 
-                        allowFullScreen={false} 
-                        loading="lazy" 
-                        referrerPolicy="no-referrer-when-downgrade"
+                    <MapEmbed
                         title="ONE Hand Labs Contact Map"
                         className="absolute inset-0 grayscale-[0.8] contrast-125 hover:grayscale-0 hover:contrast-100 transition-all duration-700"
-                    ></iframe>
+                    />
                 </div>
             </div>
         </section>

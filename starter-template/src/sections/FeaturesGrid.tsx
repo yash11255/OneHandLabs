@@ -1,5 +1,6 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const features = [
     {
@@ -30,44 +31,31 @@ const features = [
 
 function FeatureCard({ icon, title, color, colorRgb, description, bullets, index }: typeof features[0] & { index: number }) {
     const [hovered, setHovered] = useState(false);
-    const [visible, setVisible] = useState(false);
-    const ref = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-            { threshold: 0.15 }
-        );
-        if (ref.current) observer.observe(ref.current);
-        return () => observer.disconnect();
-    }, []);
 
     return (
-        <div
-            ref={ref}
+        <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(32px)",
                 border: `1px solid ${hovered ? `rgba(${colorRgb},0.35)` : "rgba(72,72,71,0.2)"}`,
                 background: hovered ? "rgba(26,26,26,0.95)" : "rgba(19,19,19,0.9)",
-                borderRadius: "16px",
+                borderRadius: "20px",
                 boxShadow: hovered ? `0 0 40px rgba(${colorRgb},0.12), 0 8px 32px rgba(0,0,0,0.4)` : "0 2px 12px rgba(0,0,0,0.2)",
-                padding: "2rem",
+                padding: "2.5rem",
                 position: "relative",
                 overflow: "hidden",
-                cursor: "default",
-                transition: `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s, border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease`,
+                transition: "border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease",
             }}
         >
-            {/* Top shimmer */}
             <div style={{
                 position: "absolute", top: 0, left: 0, right: 0, height: "1px",
                 background: `linear-gradient(90deg, transparent 0%, ${color} 50%, transparent 100%)`,
                 opacity: hovered ? 0.8 : 0.1, transition: "opacity 0.4s ease",
             }} />
-            {/* Glow orb */}
             <div style={{
                 position: "absolute", bottom: -40, right: -40, width: 160, height: 160,
                 background: color, borderRadius: "50%", filter: "blur(80px)",
@@ -75,21 +63,20 @@ function FeatureCard({ icon, title, color, colorRgb, description, bullets, index
                 pointerEvents: "none",
             }} />
 
-            {/* Icon */}
             <div style={{
-                width: 48, height: 48, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center",
+                width: 52, height: 52, borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center",
                 background: `rgba(${colorRgb},0.08)`, border: `1px solid rgba(${colorRgb},0.2)`,
-                marginBottom: "1.25rem",
+                marginBottom: "1.75rem",
             }}>
-                <span className="material-symbols-outlined" style={{ color, fontSize: 24, transform: hovered ? "scale(1.15)" : "scale(1)", transition: "transform 0.3s ease" }}>
+                <span className="material-symbols-outlined" style={{ color, fontSize: 26, transform: hovered ? "scale(1.15)" : "scale(1)", transition: "transform 0.3s ease" }}>
                     {icon}
                 </span>
             </div>
 
-            <h3 className="font-headline font-bold text-white mb-3" style={{ fontSize: "1.25rem" }}>{title}</h3>
-            <p className="text-sm text-on-surface-variant leading-relaxed mb-5">{description}</p>
+            <h3 className="font-headline font-bold text-white mb-3 tracking-tight" style={{ fontSize: "1.5rem" }}>{title}</h3>
+            <p className="text-sm text-on-surface-variant leading-relaxed mb-6">{description}</p>
 
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
                 {bullets.map((b) => (
                     <li key={b} className="flex items-center gap-2 text-sm" style={{ color: "rgba(255,255,255,0.75)" }}>
                         <span className="material-symbols-outlined" style={{ color, fontSize: 16, fontVariationSettings: "'FILL' 1" }}>check_circle</span>
@@ -97,7 +84,7 @@ function FeatureCard({ icon, title, color, colorRgb, description, bullets, index
                     </li>
                 ))}
             </ul>
-        </div>
+        </motion.div>
     );
 }
 
@@ -105,17 +92,23 @@ export default function FeaturesGrid() {
     return (
         <section className="py-32 px-6 md:px-24" style={{ background: "rgba(14,14,14,1)" }}>
             <div className="max-w-[1440px] mx-auto">
-                <div className="text-center mb-16">
-                    <span className="text-xs uppercase tracking-[0.4em] font-headline text-primary font-bold mb-4 block">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-center mb-20"
+                >
+                    <span className="text-xs uppercase tracking-[0.4em] font-headline text-primary font-bold mb-5 block">
                         Product Suite
                     </span>
-                    <h2 className="text-4xl md:text-6xl font-headline font-bold text-white tracking-tight leading-tight max-w-2xl mx-auto">
-                        One Platform.<br />Three Core Systems.
+                    <h2 className="font-headline font-bold text-white tracking-tighter leading-[1.05] max-w-3xl mx-auto" style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)" }}>
+                        Three systems.<br />One source of truth.
                     </h2>
-                    <p className="text-on-surface-variant mt-6 max-w-xl mx-auto text-base leading-relaxed">
-                        CRM, HRMS, and Payroll — deeply integrated, enterprise-ready, and built for the way Indian businesses actually work.
+                    <p className="text-on-surface-variant mt-7 max-w-xl mx-auto text-lg leading-relaxed">
+                        CRM, HRMS, and Payroll — deeply integrated and built for how Indian businesses actually run.
                     </p>
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {features.map((f, i) => (

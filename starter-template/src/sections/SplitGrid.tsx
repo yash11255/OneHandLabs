@@ -10,7 +10,7 @@ export default function SplitGrid() {
                     <div className="flex items-center gap-3 mb-12">
                         <span className="material-symbols-outlined text-primary-container text-4xl">terminal</span>
                         <h2 className="text-3xl font-headline font-bold uppercase tracking-widest text-white">
-                            LABS.EXE
+                            DEVELOPMENT
                         </h2>
                     </div>
 
@@ -20,13 +20,13 @@ export default function SplitGrid() {
                                 SOFTWARE DEVELOPMENT
                             </h3>
                             <p className="text-on-surface-variant font-mono text-sm uppercase tracking-tighter max-w-md">
-                                [01] Full-stack architecture
+                                [01] Custom healthcare websites &amp; portals
                                 <br />
-                                [02] Algorithmic optimization
+                                [02] Next.js architecture, built for speed
                                 <br />
-                                [03] Custom API infrastructure
+                                [03] Schema &amp; technical SEO from day one
                                 <br />
-                                [04] Hardened security protocols
+                                [04] Secure patient-data handling
                             </p>
                         </div>
 
@@ -73,7 +73,7 @@ export default function SplitGrid() {
                     <div className="flex items-center gap-3 mb-12">
                         <span className="material-symbols-outlined text-tertiary text-4xl">auto_awesome</span>
                         <h2 className="text-3xl font-headline font-bold uppercase tracking-widest text-white">
-                            AGENCY.IO
+                            GROWTH
                         </h2>
                     </div>
 

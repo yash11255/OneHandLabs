@@ -3,6 +3,7 @@ import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import CTA from "@/sections/CTA";
 import Link from "next/link";
+import ArticleSchema from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
     title: "Dr. Anshul Goel: Orthopedic & Spine Surgeon Gurgaon | ONE Hand Labs",
@@ -27,6 +28,13 @@ export const metadata: Metadata = {
 export default function DrAnshulGoelArticle() {
     return (
         <div className="flex flex-col min-h-screen">
+            <ArticleSchema
+                headline="Dr. Anshul Goel: Orthopedic & Spine Surgeon Gurgaon"
+                description="Dr. Anshul Goel is an Orthopedic, Spine & Joint Replacement Surgeon with 19 years of experience. Discover his digital brand story crafted by ONE Hand Labs."
+                url="https://onehandlabs.in/blog/dr-anshul-goel-orthopedic-spine-surgeon"
+                datePublished="February 8, 2026"
+                breadcrumbLabel="Dr. Anshul Goel Case Study"
+            />
             <Navbar />
             <main className="flex-1">
                 <article className="pt-40 pb-32 px-6 md:px-16 max-w-[860px] mx-auto">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/sections/Navbar";
 import FeaturedBlog from "@/sections/FeaturedBlog";
+import CaseStudiesGrid from "@/sections/CaseStudiesGrid";
 import CTA from "@/sections/CTA";
 import Footer from "@/sections/Footer";
 
@@ -31,6 +32,7 @@ export default function BlogPage() {
             <Navbar />
             <main className="flex-1">
                 <FeaturedBlog />
+                <CaseStudiesGrid />
                 <CTA />
             </main>
             <Footer />

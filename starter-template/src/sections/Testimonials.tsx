@@ -1,41 +1,40 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
-const testimonials = [
+const highlights = [
     {
-        quote: "PaySync saved us 3 days every month on salary processing. TDS calculations are flawless — our CA hasn't flagged a single error since we went live.",
-        name: "Rakesh Mehta",
-        role: "CFO, NovaBuild Infrastructure",
-        stars: 5,
-        tag: "Payroll",
+        name: "iMedi.health",
+        role: "Regenerative Health Ecosystem",
+        result: "A digital healthcare ecosystem built in collaboration with Dr. Ashish Kalla — integrated medical services, personal branding, and organic growth from launch.",
+        tag: "Healthcare",
+        slug: "imedi-digital-health-ecosystem",
     },
     {
-        quote: "HRMS Pro completely transformed our onboarding. New hires are productive within their first week now. The offer letter automation alone saved us countless hours.",
-        name: "Priya Sharma",
-        role: "Head of HR, Horizon Logistics",
-        stars: 5,
-        tag: "HRMS",
+        name: "ABCD.health",
+        role: "Obesity Management Platform",
+        result: "A specialized clinical knowledge platform for Adiposity-Based Chronic Disease, engineered to drive consistent monthly organic sessions from patients and clinicians alike.",
+        tag: "Healthcare",
+        slug: "abcd-health-obesity-management",
     },
     {
-        quote: "CRM Nexus gave our sales team full pipeline visibility. We went from closing 20% of leads to 38% in four months — the follow-up automation is a game changer.",
-        name: "Arjun Tiwari",
-        role: "VP Sales, UrbanEdge Realty",
-        stars: 5,
-        tag: "CRM",
+        name: "Cure Stone",
+        role: "Urology & Kidney Stone Treatment",
+        result: "Gurgaon's premier urology platform, built to solve a real gap — patient enquiries rose substantially within 60 days of launch.",
+        tag: "Healthcare",
+        slug: "cure-stone-urology-gurgaon",
     },
     {
-        quote: "The implementation team was exceptional. We had 200 employees configured, data migrated and live in under 10 days. Absolutely unmatched support.",
-        name: "Sunita Rawat",
-        role: "Operations Director, MedPlus Clinics",
-        stars: 5,
-        tag: "HRMS",
+        name: "Medikold",
+        role: "Pharmaceutical Digital Infrastructure",
+        result: "Digital infrastructure for a pharmaceutical services and medical supply chain platform, built to scale with real operational demand.",
+        tag: "Healthcare",
+        slug: "medikold-pharma-platform",
     },
 ];
 
 const tagColors: Record<string, { color: string; bg: string; border: string }> = {
-    Payroll: { color: "#63baff", bg: "rgba(99,186,255,0.08)", border: "rgba(99,186,255,0.25)" },
-    HRMS: { color: "#c1fffe", bg: "rgba(193,255,254,0.08)", border: "rgba(193,255,254,0.25)" },
-    CRM: { color: "#a78bfa", bg: "rgba(167,139,250,0.08)", border: "rgba(167,139,250,0.25)" },
+    Healthcare: { color: "#34d399", bg: "rgba(52,211,153,0.08)", border: "rgba(52,211,153,0.25)" },
 };
 
 export default function Testimonials() {
@@ -61,58 +60,40 @@ export default function Testimonials() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                     <div>
                         <span className="text-xs uppercase tracking-[0.4em] font-headline text-primary font-bold mb-4 block">
-                            Client Stories
+                            Case Studies
                         </span>
                         <h2 className="text-4xl md:text-5xl font-headline font-bold text-white tracking-tight leading-tight">
-                            What Teams<br />Say About Us.
+                            Real Work.<br />Real Clients.
                         </h2>
                     </div>
-                    <div className="flex items-center gap-3">
-                        <div className="flex -space-x-3">
-                            {["R", "P", "A", "S"].map((l, i) => (
-                                <div key={i} className="w-9 h-9 rounded-full border-2 border-black font-headline font-bold text-xs flex items-center justify-center text-white"
-                                    style={{ background: ["#c1fffe22","#63baff22","#a78bfa22","#c1fffe22"][i], color: ["#c1fffe","#63baff","#a78bfa","#c1fffe"][i], zIndex: 4 - i }}>
-                                    {l}
-                                </div>
-                            ))}
-                        </div>
-                        <div>
-                            <div className="text-white font-headline font-bold text-sm">4.9 / 5.0</div>
-                            <div className="text-on-surface-variant text-[10px] uppercase tracking-wider">avg. rating</div>
-                        </div>
-                    </div>
+                    <p className="text-on-surface-variant max-w-sm text-sm leading-relaxed">
+                        7+ healthcare brands trust ONE Hand Labs to build and grow their digital presence — see the full portfolio.
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {testimonials.map((t, i) => {
+                    {highlights.map((t, i) => {
                         const tc = tagColors[t.tag];
                         return (
-                            <div
-                                key={i}
+                            <Link
+                                href={`/blog/${t.slug}`}
+                                key={t.slug}
                                 style={{
                                     opacity: visible ? 1 : 0,
                                     transform: visible ? "translateY(0)" : "translateY(28px)",
-                                    transition: `opacity 0.65s ease ${i * 0.12}s, transform 0.65s ease ${i * 0.12}s`,
+                                    transition: `opacity 0.65s ease ${i * 0.12}s, transform 0.65s ease ${i * 0.12}s, border-color 0.3s ease`,
                                     background: "rgba(19,19,19,0.9)",
                                     border: "1px solid rgba(72,72,71,0.2)",
                                     borderRadius: "16px",
                                     padding: "2rem",
                                     position: "relative",
                                     overflow: "hidden",
+                                    display: "block",
                                 }}
+                                className="group hover:!border-[rgba(52,211,153,0.35)]"
                             >
-                                {/* Quote mark */}
-                                <div style={{ position: "absolute", top: 16, right: 20, fontSize: "5rem", lineHeight: 1, color: tc.color, opacity: 0.08, fontFamily: "serif", pointerEvents: "none" }}>&ldquo;</div>
-
-                                {/* Stars */}
-                                <div className="flex gap-1 mb-4">
-                                    {Array.from({ length: t.stars }).map((_, si) => (
-                                        <span key={si} className="material-symbols-outlined" style={{ color: "#fbbf24", fontSize: 16, fontVariationSettings: "'FILL' 1" }}>star</span>
-                                    ))}
-                                </div>
-
                                 <p className="text-white/80 leading-relaxed mb-6 text-sm md:text-base font-body">
-                                    &ldquo;{t.quote}&rdquo;
+                                    {t.result}
                                 </p>
 
                                 <div className="flex items-center justify-between">
@@ -129,7 +110,12 @@ export default function Testimonials() {
                                         {t.tag}
                                     </span>
                                 </div>
-                            </div>
+
+                                <div className="mt-5 flex items-center gap-2 font-headline font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ color: tc.color, letterSpacing: "0.08em" }}>
+                                    Read the case study
+                                    <span className="material-symbols-outlined" style={{ fontSize: 14 }}>arrow_forward</span>
+                                </div>
+                            </Link>
                         );
                     })}
                 </div>

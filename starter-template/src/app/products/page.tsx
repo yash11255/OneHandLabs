@@ -4,6 +4,8 @@ import Footer from "@/sections/Footer";
 import CTA from "@/sections/CTA";
 import ProductsHero from "@/sections/ProductsHero";
 import ProductFeatureShowcase from "@/sections/ProductFeatureShowcase";
+import CrossSellStrip from "@/sections/CrossSellStrip";
+import MidCTA from "@/sections/MidCTA";
 
 export const metadata: Metadata = {
     title: "Products | CRM Nexus, HRMS Pro & PaySync",
@@ -18,6 +20,8 @@ export default function ProductsPage() {
             <main className="flex-1">
                 <ProductsHero />
                 <ProductFeatureShowcase />
+                <CrossSellStrip />
+                <MidCTA />
                 <CTA />
             </main>
             <Footer />

@@ -14,7 +14,7 @@ export const blogPosts = [
 
 Most Indian SMEs manage customer relationships across WhatsApp threads, spreadsheets, and memory. It works — until it doesn't. A salesperson leaves and takes the customer context with them. A follow-up gets missed because it wasn't in anyone's calendar. A deal that was 80% closed dies because no one nudged on time.
 
-According to a 2024 SME survey by Nasscom, **67% of Indian small businesses lose at least one deal per month** due to poor follow-up discipline — not lack of leads.
+Most lost deals aren't lost to competitors — they're lost to silence. A follow-up that never happens, a lead that sits untouched for a week, a handoff between team members where context evaporates. The common thread isn't a lack of leads; it's a lack of a system that remembers what needs to happen next.
 
 ## What a CRM Actually Does
 
@@ -26,12 +26,11 @@ A CRM (Customer Relationship Management) platform does three things:
 
 With CRM Nexus, you also get AI-assisted lead scoring that ranks your pipeline so your team always knows which deal to chase first.
 
-## The ROI Is Measurable
+## What Changes Once You Centralise
 
-Our customers typically see:
-- **38% improvement in lead-to-close rate** within the first quarter
-- **2× faster onboarding of new salespeople** since all context is in the system
-- **Full pipeline visibility** for managers — no more "how's that deal going?" calls
+- Deals move through defined stages instead of living in someone's head
+- New salespeople ramp up faster because account history is already in the system, not locked in a departed colleague's inbox
+- Managers get pipeline visibility without chasing status updates over WhatsApp
 
 ## Getting Started
 
@@ -79,7 +78,7 @@ Manual HR isn't just slow — it's risky. A missed PF challan, incorrect ESI cal
 - Offer letters are generated and e-signed digitally
 - All statutory documents are stored and audit-ready
 
-The ROI on HRMS investment typically pays back in 4–6 months for a 50-person firm.
+For a 50-person firm, the hours reclaimed from attendance reconciliation, payroll prep, and statutory filing alone tend to justify the switch well within the first year.
         `,
     },
     {
@@ -151,13 +150,13 @@ The interesting insight: improving any one variable by 10% compounds with the ot
 CRM Nexus captures leads from every channel — web forms, WhatsApp, cold calls, referrals — into a single pipeline. Nothing falls through the cracks, so your deal count grows without adding headcount.
 
 ### Average Deal Value
-With complete history on each account, your team can identify upsell and cross-sell opportunities they would otherwise miss. Our analytics show that reps with full CRM context close deals 22% larger on average.
+With complete history on each account, your team can spot upsell and cross-sell opportunities they'd otherwise miss — a renewal conversation is a different pitch than a first sale, and only reps with full context can tell the difference.
 
 ### Win Rate
-Lead scoring tells your team which leads are most likely to convert, based on behaviour signals — email opens, demo attendance, response time. Focusing energy on hot leads raises win rate measurably.
+Lead scoring tells your team which leads are most likely to convert, based on behaviour signals — email opens, demo attendance, response time. Focusing energy on hot leads raises win rate.
 
 ### Sales Cycle Length
-Automated follow-up sequences mean no lead goes cold because a rep was busy. The average sales cycle for CRM Nexus customers shortens by 18% in the first two quarters.
+Automated follow-up sequences mean no lead goes cold because a rep was busy elsewhere. Deals stall far more often from neglect than from genuine objections — closing that gap shortens the average cycle.
 
 ## Putting It Together
 
@@ -235,13 +234,13 @@ From FY 2024-25, the New Tax Regime is the default. PaySync generates a side-by-
 
 ## Form 16 Generation
 
-At year-end, PaySync generates Part A and Part B of Form 16 for every employee in bulk — pre-populated from the system data, reviewed, and dispatched digitally. What used to take an HR team two weeks now takes 30 minutes.
+At year-end, PaySync generates Part A and Part B of Form 16 for every employee in bulk — pre-populated from the system data, reviewed, and dispatched digitally, instead of an HR team manually compiling each one.
         `,
     },
     {
         slug: "crm-integrations-that-move-needle",
         title: "CRM Integrations That Actually Move the Needle",
-        excerpt: "Not every integration is worth building. Here are the five CRM connections that our customers use every day and that directly impact revenue.",
+        excerpt: "Not every integration is worth building. Here are the five CRM connections that matter most for Indian sales teams — and directly impact revenue.",
         category: "CRM",
         color: "#a78bfa",
         colorRgb: "167,139,250",
@@ -251,7 +250,7 @@ At year-end, PaySync generates Part A and Part B of Form 16 for every employee i
         content: `
 ## Why Most Integrations Are Noise
 
-Every CRM vendor promises hundreds of integrations. In practice, most teams use three or four — the ones that are tied to their actual sales process. Here are the five we see used consistently across our CRM Nexus customer base.
+Every CRM vendor promises hundreds of integrations. In practice, most teams use three or four — the ones that are tied to their actual sales process. Here are the five that matter most for Indian sales teams.
 
 ### 1. WhatsApp Business API
 India runs on WhatsApp. CRM Nexus connects directly with the WhatsApp Business API so every customer message is logged against their contact record, and your team can reply from within the CRM. No switching between apps.

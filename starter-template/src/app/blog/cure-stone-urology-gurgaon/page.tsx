@@ -3,6 +3,7 @@ import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import CTA from "@/sections/CTA";
 import Link from "next/link";
+import ArticleSchema from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
     title: "Cure Stone: Gurgaon's Premier Urology & Kidney Stone Treatment Platform | ONE Hand Labs",
@@ -27,6 +28,13 @@ export const metadata: Metadata = {
 export default function CureStoneArticle() {
     return (
         <div className="flex flex-col min-h-screen">
+            <ArticleSchema
+                headline="Cure Stone: Gurgaon's Premier Urology & Kidney Stone Treatment Platform"
+                description="Cure Stone is Gurgaon's specialized urology clinic for advanced kidney stone treatment. See how ONE Hand Labs engineered their digital presence and SEO strategy."
+                url="https://onehandlabs.in/blog/cure-stone-urology-gurgaon"
+                datePublished="March 5, 2026"
+                breadcrumbLabel="Cure Stone Case Study"
+            />
             <Navbar />
             <main className="flex-1">
                 <article className="pt-40 pb-32 px-6 md:px-16 max-w-[860px] mx-auto">

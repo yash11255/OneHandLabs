@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Manrope } from "next/font/google";
 import "./globals.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const spaceGrotesk = Space_Grotesk({
     variable: "--font-space-grotesk",
@@ -16,36 +17,35 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
     title: {
-        default: "ONE Hand Labs | CRM, HRMS & Payroll Systems",
+        default: "ONE Hand Labs | Software Development Agency & CRM, HRMS, Payroll Products",
         template: "%s | ONE Hand Labs",
     },
-    description: "Enterprise CRM, HRMS, and Payroll software built for Indian businesses. Automate HR operations, payroll compliance, and customer management with ONE Hand Labs — based in Delhi NCR.",
+    description: "ONE Hand Labs builds custom software and digital growth for healthcare brands, and makes CRM Nexus, HRMS Pro & PaySync — enterprise CRM, HRMS, and payroll software for Indian businesses. Based in Delhi NCR.",
     keywords: [
+        "software development agency India",
+        "healthcare digital marketing agency",
         "CRM software India",
         "HRMS software India",
         "payroll software India",
         "HR management system Delhi",
         "payroll automation India",
-        "employee management system",
         "TDS EPF ESI payroll",
         "CRM for Indian SMEs",
-        "HRMS for startups India",
         "enterprise software Delhi NCR",
-        "payroll compliance software",
         "ONE Hand Labs",
     ],
     openGraph: {
         type: "website",
         locale: "en_IN",
         url: "https://onehandlabs.in",
-        title: "ONE Hand Labs | Engineering Logic. Marketing Magic.",
-        description: "A hybrid laboratory for high-performance software development and data-driven marketing growth.",
+        title: "ONE Hand Labs | Software Development Agency & CRM, HRMS, Payroll Products",
+        description: "Custom software and digital growth for healthcare brands, plus CRM Nexus, HRMS Pro & PaySync — enterprise CRM, HRMS, and payroll software for Indian businesses.",
         siteName: "ONE Hand Labs",
     },
     twitter: {
         card: "summary_large_image",
-        title: "ONE Hand Labs | Engineering Logic. Marketing Magic.",
-        description: "A hybrid laboratory for high-performance software development and data-driven marketing growth.",
+        title: "ONE Hand Labs | Software Development Agency & CRM, HRMS, Payroll Products",
+        description: "Custom software and digital growth for healthcare brands, plus CRM Nexus, HRMS Pro & PaySync for Indian businesses.",
     },
     icons: {
         icon: [
@@ -73,6 +73,41 @@ export const metadata: Metadata = {
     },
 };
 
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "ONE Hand Labs",
+    url: "https://onehandlabs.in",
+    logo: "https://onehandlabs.in/android-chrome-512x512.png",
+    description: "Software development agency and enterprise product studio based in Delhi NCR — building custom digital growth for healthcare brands and CRM/HRMS/Payroll software for Indian businesses.",
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Gurugram",
+        addressRegion: "Delhi NCR",
+        addressCountry: "IN",
+    },
+    telephone: "+91-8950143430",
+    contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+91-8950143430",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["en", "hi"],
+    },
+};
+
+const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "ONE Hand Labs",
+    url: "https://onehandlabs.in",
+    potentialAction: {
+        "@type": "SearchAction",
+        target: "https://onehandlabs.in/blog?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+    },
+};
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -82,14 +117,32 @@ export default function RootLayout({
         <html lang="en" className="dark scroll-smooth">
             <head>
                 <link
+                    rel="preconnect"
+                    href="https://fonts.googleapis.com"
+                />
+                <link
+                    rel="preconnect"
+                    href="https://fonts.gstatic.com"
+                    crossOrigin="anonymous"
+                />
+                <link
                     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
                     rel="stylesheet"
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
                 />
             </head>
             <body
                 className={`${spaceGrotesk.variable} ${manrope.variable} font-body antialiased bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container`}
             >
                 {children}
+                <WhatsAppButton />
             </body>
         </html>
     );

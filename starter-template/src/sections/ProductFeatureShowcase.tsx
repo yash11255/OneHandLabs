@@ -63,7 +63,7 @@ export default function ProductFeatureShowcase() {
     const [videoLoaded, setVideoLoaded] = useState<Record<string, boolean>>({});
 
     return (
-        <section className="py-20 px-6 md:px-16 lg:px-24" style={{ background: "rgba(10,10,12,1)" }}>
+        <section id="modules" className="py-20 px-6 md:px-16 lg:px-24" style={{ background: "rgba(10,10,12,1)" }}>
             <div className="max-w-[1280px] mx-auto space-y-40">
                 {products.map((p, idx) => {
                     const isReverse = idx % 2 === 1;

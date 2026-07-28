@@ -3,6 +3,7 @@ import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import CTA from "@/sections/CTA";
 import Link from "next/link";
+import ArticleSchema from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
     title: "Medikold: Powering Pharmaceutical Digital Infrastructure | ONE Hand Labs",
@@ -27,6 +28,13 @@ export const metadata: Metadata = {
 export default function MedikoldArticle() {
     return (
         <div className="flex flex-col min-h-screen">
+            <ArticleSchema
+                headline="Medikold: Powering Pharmaceutical Digital Infrastructure"
+                description="Medikold is a specialized healthcare vertical focused on pharmaceutical services and medical supply chains. Discover how ONE Hand Labs engineered Medikold's digital presence."
+                url="https://onehandlabs.in/blog/medikold-pharma-platform"
+                datePublished="March 14, 2026"
+                breadcrumbLabel="Medikold Case Study"
+            />
             <Navbar />
             <main className="flex-1">
                 <article className="pt-40 pb-32 px-6 md:px-16 max-w-[860px] mx-auto">

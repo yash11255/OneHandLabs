@@ -3,6 +3,7 @@ import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import CTA from "@/sections/CTA";
 import Link from "next/link";
+import ArticleSchema from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
     title: "ABCD.health: Turning the Science of Obesity Into a Scalable Digital Platform",
@@ -29,6 +30,13 @@ export const metadata: Metadata = {
 export default function AbcdArticle() {
     return (
         <div className="flex flex-col min-h-screen">
+            <ArticleSchema
+                headline="ABCD.health: Turning the Science of Obesity Into a Scalable Digital Platform"
+                description="How ABCD.health became a leading obesity management knowledge platform in South Asia — and the role ONE Hand Labs played in engineering its digital presence."
+                url="https://onehandlabs.in/blog/abcd-health-obesity-management"
+                datePublished="April 10, 2026"
+                breadcrumbLabel="ABCD.health Case Study"
+            />
             <Navbar />
             <main className="flex-1">
                 <article className="pt-40 pb-32 px-6 md:px-16 max-w-[860px] mx-auto">

@@ -5,6 +5,7 @@ import Footer from "@/sections/Footer";
 import CTA from "@/sections/CTA";
 import Link from "next/link";
 import { blogPosts } from "@/data/blogPosts";
+import ArticleSchema from "@/components/ArticleSchema";
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -50,6 +51,13 @@ export default async function BlogPostPage({ params }: Props) {
 
     return (
         <div className="flex flex-col min-h-screen">
+            <ArticleSchema
+                headline={post.title}
+                description={post.excerpt}
+                url={`https://onehandlabs.in/blog/${post.slug}`}
+                datePublished={post.date}
+                breadcrumbLabel={post.title}
+            />
             <Navbar />
             <main className="flex-1">
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 /* ─────────────────────────────────────────
    Types
@@ -21,7 +22,7 @@ type Client = {
 const clients: Client[] = [
     {
         id: "imedi",
-        src: "/Screenshot 2026-04-14 at 12.13.00 PM.png",
+        src: "/imedi-health-platform.png",
         title: "iMedi.health",
         label: "Regenerative Health",
         desc: "A digital healthcare ecosystem developed in collaboration with Dr. Ashish Kalla, focusing on integrated medical services and personal branding.",
@@ -48,7 +49,7 @@ const clients: Client[] = [
     },
     {
         id: "curestone",
-        src: "/Screenshot 2026-04-14 at 12.13.50 PM.png",
+        src: "/cure-stone-clinic.png",
         title: "Cure Stone",
         label: "Urology",
         desc: "Specialized provider in Gurgaon for advanced urology and kidney stone treatments.",
@@ -61,7 +62,7 @@ const clients: Client[] = [
         title: "Dr. Ashish Kalla",
         label: "General Medicine",
         desc: "Specialist in General Medicine with over 13 years of rich clinical and digital health experience.",
-        href: "#",
+        href: "/blog/dr-ashish-kalla-regenerative-medicine",
         size: "lg",
     },
     {
@@ -70,7 +71,7 @@ const clients: Client[] = [
         title: "Dr. Deepanshu Gupta",
         label: "Urology & Andrology",
         desc: "Top Urologist, Andrologist & Renal Transplant Surgeon in Gurgaon/Delhi NCR.",
-        href: "#",
+        href: "/blog/dr-deepanshu-gupta-urologist-gurgaon",
         size: "md",
     },
     {
@@ -79,14 +80,23 @@ const clients: Client[] = [
         title: "Dr. Anshul Goel",
         label: "Orthopedic Surgery",
         desc: "Orthopedic, Spine, and Joint Replacement Surgeon with 19 years of experience.",
-        href: "#",
+        href: "/blog/dr-anshul-goel-orthopedic-spine-surgeon",
         size: "lg",
+    },
+    {
+        id: "a1agro",
+        src: "/a1-agro-india.png",
+        title: "A1 Agro Industries",
+        label: "Agro Export",
+        desc: "International Basmati and Non-Basmati rice manufacturer and exporter based in Noida, Delhi NCR.",
+        href: "https://a1agroindia.com",
+        size: "md",
     },
 ];
 
 const STATS = [
-    { value: "7+", label: "Clients" },
-    { value: "4", label: "Platforms" },
+    { value: "8+", label: "Clients" },
+    { value: "5", label: "Platforms" },
     { value: "3", label: "Doctors" },
 ];
 
@@ -322,12 +332,11 @@ export default function Work() {
                             <a
                                 key={project.id}
                                 href={project.href}
-                                target={project.href !== "#" ? "_blank" : "_self"}
-                                rel="noopener noreferrer"
+                                target={project.href.startsWith("http") ? "_blank" : undefined}
+                                rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
                                 className="work-card-wrap"
                                 onMouseEnter={() => setHoveredId(project.id)}
                                 onMouseLeave={() => setHoveredId(null)}
-                                onClick={(e) => project.href === "#" && e.preventDefault()}
                             >
                                 <div
                                     className={cardClass}
@@ -339,11 +348,12 @@ export default function Work() {
                                     {/* Image */}
                                     {project.src && (
                                         <div className="absolute inset-0">
-                                            <img
+                                            <Image
                                                 src={project.src}
                                                 alt={project.title}
+                                                fill
+                                                sizes="(max-width: 640px) 100vw, 50vw"
                                                 className="work-card-img"
-                                                loading="lazy"
                                                 onError={(e) => {
                                                     (e.currentTarget as HTMLImageElement).style.display = "none";
                                                 }}

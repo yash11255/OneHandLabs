@@ -3,6 +3,7 @@ import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import CTA from "@/sections/CTA";
 import Link from "next/link";
+import ArticleSchema from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
     title: "How iMedi.health Is Redefining Regenerative Care Through Digital Innovation",
@@ -29,6 +30,13 @@ export const metadata: Metadata = {
 export default function ImediArticle() {
     return (
         <div className="flex flex-col min-h-screen">
+            <ArticleSchema
+                headline="How iMedi.health Is Redefining Regenerative Care Through Digital Innovation"
+                description="iMedi.health is pioneering a new category in healthcare — blending regenerative medicine with a world-class digital experience. ONE Hand Labs breaks down the full case study."
+                url="https://onehandlabs.in/blog/imedi-digital-health-ecosystem"
+                datePublished="April 18, 2026"
+                breadcrumbLabel="iMedi.health Case Study"
+            />
             <Navbar />
             <main className="flex-1">
                 <article className="pt-40 pb-32 px-6 md:px-16 max-w-[860px] mx-auto">

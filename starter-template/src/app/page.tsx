@@ -5,6 +5,8 @@ import LogoTicker from "@/sections/LogoTicker";
 import FeaturedResults from "@/sections/FeaturedResults";
 import FeaturesGrid from "@/sections/FeaturesGrid";
 import Testimonials from "@/sections/Testimonials";
+import MidCTA from "@/sections/MidCTA";
+import Faqs from "@/sections/Faqs";
 import CTA from "@/sections/CTA";
 import Footer from "@/sections/Footer";
 
@@ -23,6 +25,8 @@ export default function Home() {
                 <FeaturesGrid />
                 <FeaturedResults />
                 <Testimonials />
+                <MidCTA />
+                <Faqs />
                 <CTA />
             </main>
             <Footer />

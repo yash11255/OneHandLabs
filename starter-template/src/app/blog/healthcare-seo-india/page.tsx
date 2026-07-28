@@ -3,6 +3,7 @@ import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import CTA from "@/sections/CTA";
 import Link from "next/link";
+import ArticleSchema from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
     title: "Why Healthcare SEO in India Is Broken — And How We're Fixing It",
@@ -30,6 +31,13 @@ export const metadata: Metadata = {
 export default function HealthcareSeoArticle() {
     return (
         <div className="flex flex-col min-h-screen">
+            <ArticleSchema
+                headline="Why Healthcare SEO in India Is Broken — And How We're Fixing It"
+                description="Most healthcare websites in India generate zero organic traffic. ONE Hand Labs breaks down the systemic failures in medical SEO and shares the exact playbook used for iMedi.health and ABCD.health."
+                url="https://onehandlabs.in/blog/healthcare-seo-india"
+                datePublished="March 22, 2026"
+                breadcrumbLabel="Healthcare SEO in India"
+            />
             <Navbar />
             <main className="flex-1">
                 <article className="pt-40 pb-32 px-6 md:px-16 max-w-[860px] mx-auto">

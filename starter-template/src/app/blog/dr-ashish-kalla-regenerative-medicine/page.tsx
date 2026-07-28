@@ -3,6 +3,7 @@ import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import CTA from "@/sections/CTA";
 import Link from "next/link";
+import ArticleSchema from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
     title: "Dr. Ashish Kalla on Regenerative Medicine & Doctor Branding | ONE Hand Labs",
@@ -17,19 +18,26 @@ export const metadata: Metadata = {
         "medical personal branding",
     ],
     openGraph: {
-        url: "https://onehandlabs.in/blog/dr-shosh-kalla-regenerative-medicine",
-        title: "Dr. Shosh Kalla on Regenerative Medicine | ONE Hand Labs",
+        url: "https://onehandlabs.in/blog/dr-ashish-kalla-regenerative-medicine",
+        title: "Dr. Ashish Kalla on Regenerative Medicine | ONE Hand Labs",
         description:
-            "An expert spotlight on Dr. Shosh Kalla — her approach to regenerative medicine and how digital branding amplifies clinical impact.",
+            "An expert spotlight on Dr. Ashish Kalla — his approach to regenerative medicine and how digital branding amplifies clinical impact.",
     },
     alternates: {
-        canonical: "https://onehandlabs.in/blog/dr-shosh-kalla-regenerative-medicine",
+        canonical: "https://onehandlabs.in/blog/dr-ashish-kalla-regenerative-medicine",
     },
 };
 
-export default function DrShoshKallaArticle() {
+export default function DrAshishKallaArticle() {
     return (
         <div className="flex flex-col min-h-screen">
+            <ArticleSchema
+                headline="Dr. Ashish Kalla on Regenerative Medicine & Doctor Branding"
+                description="Dr. Ashish Kalla is at the forefront of integrative and regenerative medicine. Learn how strategic digital branding amplifies clinical impact — a spotlight by ONE Hand Labs."
+                url="https://onehandlabs.in/blog/dr-ashish-kalla-regenerative-medicine"
+                datePublished="April 3, 2026"
+                breadcrumbLabel="Dr. Ashish Kalla Case Study"
+            />
             <Navbar />
             <main className="flex-1">
                 <article className="pt-40 pb-32 px-6 md:px-16 max-w-[860px] mx-auto">
@@ -69,7 +77,7 @@ export default function DrShoshKallaArticle() {
                         className="font-headline font-black text-white uppercase tracking-tighter leading-[1.0] mb-8"
                         style={{ fontSize: "clamp(2rem,5vw,3.4rem)" }}
                     >
-                        Dr. Shosh Kalla on Regenerative Medicine: Building a Doctor Brand That Patients Trust
+                        Dr. Ashish Kalla on Regenerative Medicine: Building a Doctor Brand That Patients Trust
                     </h1>
 
                     {/* Reference box linking to iMedi */}
@@ -84,7 +92,7 @@ export default function DrShoshKallaArticle() {
                             className="text-sm"
                             style={{ color: "rgba(255,255,255,0.45)", fontFamily: "var(--font-manrope), sans-serif" }}
                         >
-                            Dr. Shosh Kalla is featured on the{" "}
+                            Dr. Ashish Kalla is featured on the{" "}
                             <a
                                 href="https://imedi.health"
                                 target="_blank"
@@ -93,7 +101,7 @@ export default function DrShoshKallaArticle() {
                             >
                                 iMedi.health
                             </a>{" "}
-                            platform. Visit to explore her clinical work and philosophy.
+                            platform. Visit to explore his clinical work and philosophy.
                         </p>
                         <a
                             href="https://imedi.health"
@@ -117,9 +125,9 @@ export default function DrShoshKallaArticle() {
                         <p>
                             In a landscape crowded with medical professionals competing for visibility
                             online, few physicians have built the kind of quiet, authoritative digital
-                            presence that Dr. Shosh Kalla has. A specialist in integrative and
+                            presence that Dr. Ashish Kalla has. A specialist in integrative and
                             regenerative medicine, Dr. Kalla&apos;s approach to patient care is mirrored in
-                            how she communicates: with precision, empathy, and depth.
+                            how he communicates: with precision, empathy, and depth.
                         </p>
 
                         <p>
@@ -133,7 +141,7 @@ export default function DrShoshKallaArticle() {
                                 iMedi.health
                             </a>
                             , a cutting-edge digital health ecosystem that ONE Hand Labs helped build from
-                            the ground up. We spoke with her about the intersection of clinical expertise
+                            the ground up. We spoke with him about the intersection of clinical expertise
                             and digital presence.
                         </p>
 
@@ -170,7 +178,7 @@ export default function DrShoshKallaArticle() {
                             Patients in India increasingly research their doctors before booking
                             appointments. A well-designed digital profile — backed by genuine clinical
                             content — is no longer optional; it&apos;s a prerequisite for earning patient
-                            trust. ONE Hand Labs worked with Dr. Shosh Kalla and the{" "}
+                            trust. ONE Hand Labs worked with Dr. Ashish Kalla and the{" "}
                             <a
                                 href="https://imedi.health"
                                 target="_blank"

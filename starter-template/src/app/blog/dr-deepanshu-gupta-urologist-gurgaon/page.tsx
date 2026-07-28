@@ -3,6 +3,7 @@ import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import CTA from "@/sections/CTA";
 import Link from "next/link";
+import ArticleSchema from "@/components/ArticleSchema";
 
 export const metadata: Metadata = {
     title: "Dr. Deepanshu Gupta: Top Urologist & Andrologist in Gurgaon | ONE Hand Labs",
@@ -27,6 +28,13 @@ export const metadata: Metadata = {
 export default function DrDeepanshuGuptaArticle() {
     return (
         <div className="flex flex-col min-h-screen">
+            <ArticleSchema
+                headline="Dr. Deepanshu Gupta: Top Urologist & Andrologist in Gurgaon"
+                description="Dr. Deepanshu Gupta is a leading Urologist, Andrologist & Renal Transplant Surgeon in Gurgaon/Delhi NCR. Discover how ONE Hand Labs crafted his digital brand presence."
+                url="https://onehandlabs.in/blog/dr-deepanshu-gupta-urologist-gurgaon"
+                datePublished="February 20, 2026"
+                breadcrumbLabel="Dr. Deepanshu Gupta Case Study"
+            />
             <Navbar />
             <main className="flex-1">
                 <article className="pt-40 pb-32 px-6 md:px-16 max-w-[860px] mx-auto">
